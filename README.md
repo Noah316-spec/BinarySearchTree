@@ -1,6 +1,7 @@
 # Binärer Suchbaum in C#
 
 Dieses Programm implementiert einen binären Suchbaum in C#. Es besteht aus zwei Hauptklassen: `Node` und `BinarySearchTree`.
+![image](https://github.com/Noah316-spec/BinarySearchTree/assets/106232024/d3a4b30c-410f-42ae-a8cf-3465549c8840)
 
 ## Klasse Node
 
@@ -19,6 +20,7 @@ Die `BinarySearchTree`-Klasse implementiert die Funktionalitäten des binären S
 ### Methode Insert
 
 Die `Insert`-Methode fügt einen neuen Knoten in den Baum ein. Sie nimmt zwei Parameter: `index`, der den einzufügenden Wert darstellt, und `node`, der den einzufügenden Knoten darstellt.
+
 
 ### Methode Search
 
