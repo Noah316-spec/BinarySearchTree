@@ -1,19 +1,3 @@
-// See https://aka.ms/new-console-template for more information
-/*
-Aufgabe: Implementieren Sie einen binären Suchbaum in C#. 
-
-Anforderungen:
-1. Erstellen Sie eine Klasse "Node" mit den Eigenschaften "data", "leftChild" und "rightChild".
-2. Erstellen Sie eine Klasse "BinarySearchTree" mit den Methoden "Insert", "Search" und "InOrderTraversal".
-3. Die Methode "Insert" sollte einen neuen Knoten in den Baum einfügen.
-4. Die Methode "Search" sollte einen bestimmten Wert im Baum suchen und true zurückgeben, wenn der Wert gefunden wird, sonst false.
-5. Die Methode "InOrderTraversal" sollte den Baum in aufsteigender Reihenfolge durchlaufen und die Werte ausgeben.
-
-Hinweis: Sie können davon ausgehen, dass die Eingabewerte für "Insert" und "Search" Ganzzahlen sind.
-*/
-
-// Ihre Lösung hier
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
