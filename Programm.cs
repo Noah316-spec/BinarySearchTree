@@ -7,7 +7,6 @@ namespace MeinProgramm
 {
     class Program
     {
-        // Hauptmethode des Programms
         static void Main(string[] args)
         {
             // Hier können Sie Instanzen von BinarySearchTree erstellen und Methoden aufrufen
@@ -18,16 +17,16 @@ namespace MeinProgramm
     class Node
     {
         public int data; // Der Wert, den der Knoten speichert
-        public Node leftChild; // Linker Kindknoten dieses Knotens
-        public Node rightChild; // Rechter Kindknoten dieses Knotens
+        public Node leftChild; // Linker knoten 
+        public Node rightChild; // Rechter knoten 
     }
 
-    // Klasse für den binären Suchbaum
+    
     class BinarySearchTree
     {
         Node root; // Wurzelknoten des Baums
 
-        // Methode zum Einfügen eines neuen Knotens in den Baum
+       //Einfügen der Werte
         public void Insert(int index, Node node) 
         { 
             node.data = index; // Setzen des Werts des Knotens
@@ -39,17 +38,17 @@ namespace MeinProgramm
             }
             else
             {
-                Node current = root; // Beginnen Sie mit der Wurzel
+                Node current = root; 
                 Node parent;
 
-                // Durchlaufen Sie den Baum, um den richtigen Platz für den neuen Knoten zu finden
+                //richtigen Platz für den neuen Knoten finden
                 while(true)
                 {
                     parent = current;
-                    if(index < current.data) // Gehe nach links, wenn der neue Wert kleiner ist
+                    if(index < current.data) // Gehe nach links wenn der neue Wert kleiner ist
                     {
                         current = current.leftChild;
-                        if(current == null) // Wenn es keinen linken Kindknoten gibt, füge den neuen Knoten hier ein
+                        if(current == null) // Wenn es keinen linken Kindknoten gibt, füge den neuen Knoten hinzu
                         {
                             parent.leftChild = node;
                             return;
@@ -58,7 +57,7 @@ namespace MeinProgramm
                     else // Gehe nach rechts, wenn der neue Wert größer ist
                     {
                         current = current.rightChild;
-                        if(current == null) // Wenn es keinen rechten Kindknoten gibt, füge den neuen Knoten hier ein
+                        if(current == null) // Wenn es keinen rechten Kindknoten gibt, füge den neuen Knoten hinzu
                         {
                             parent.rightChild = node;
                             return;
@@ -68,12 +67,12 @@ namespace MeinProgramm
             }
         }
 
-        // Methode zum Suchen eines Werts im Baum
+        // Suchen
         public bool Search(int index)
         {
-            Node current = root; // Beginnen Sie mit der Wurzel
+            Node current = root;
 
-            // Durchlaufen Sie den Baum, bis der Wert gefunden wird oder alle Knoten durchsucht wurden
+            // Durchlaufen bis der Wert gefunden wird oder alle Knoten durchsucht wurden
             while(current != null)
             {
                 if(index == current.data) // Wenn der Wert gefunden wird, geben Sie true zurück
@@ -90,17 +89,17 @@ namespace MeinProgramm
                 }
             }
 
-            return false; // Wenn der Wert nicht gefunden wird, geben Sie false zurück
+            return false; // Nicht gefunden false zurückgegeben
         }
 
-        // Methode zum Durchlaufen des Baums in aufsteigender Reihenfolge
+       
         public void InOrderTraversal(Node node)
         {
             if (node != null)
             {
-                InOrderTraversal(node.leftChild); // Besuchen Sie zuerst den linken Unterbaum
-                Console.Write(node.data + " "); // Dann drucken Sie den Wert des Knotens
-                InOrderTraversal(node.rightChild); // Zuletzt besuchen Sie den rechten Unterbaum
+                InOrderTraversal(node.leftChild); 
+                Console.Write(node.data + " "); 
+                InOrderTraversal(node.rightChild); 
             }
         }
     }
